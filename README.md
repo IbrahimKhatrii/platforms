@@ -1,6 +1,6 @@
-# **platforms**
+# **platformer**
 
-A lightweight, compile-time–selected platform detection utility for Dart and Flutter.
+A lightweight, compile-time–selected platformer detection utility for Dart and Flutter.
 This package provides a single, consistent `Platform` API that works across:
 
 - **Web**
@@ -10,7 +10,7 @@ This package provides a single, consistent `Platform` API that works across:
 - **Linux**
 - **macOS**
 - **Standalone Dart CLI**
-- **Any environment without a known platform backend (stub)**
+- **Any environment without a known platformer backend (stub)**
 
 The correct implementation is chosen automatically through conditional imports.
 No manual configuration, no fragile checks, and no runtime guessing.
@@ -20,10 +20,10 @@ No manual configuration, no fragile checks, and no runtime guessing.
 ## **Purpose**
 
 Dart’s platform detection APIs differ between `dart:io`, `dart:html`, Flutter, and CLI environments.
-This package standardizes that behavior by exposing a single, unified `Platform` class:
+This package standardizes that behavior by exposing a single, unified `Platformer` class:
 
 - **Web builds** → 100% web-specific implementation
-- **IO builds** → backed directly by `dart:io.Platform`
+- **IO builds** → backed directly by `dart:io.Platformer`
 - **Unsupported/unknown builds** → safe stub fallback
 
 This ensures deterministic behavior with zero ambiguity.
@@ -48,13 +48,13 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  platforms: ^1.0.0
+  platformer: ^1.0.0
 ```
 
 Then import it:
 
 ```dart
-import 'package:platforms/platforms.dart';
+import 'package:platformer/platformer.dart';
 ```
 
 ---
@@ -64,18 +64,18 @@ import 'package:platforms/platforms.dart';
 The API is intentionally simple and mirrors Dart’s native naming.
 
 ```dart
-import 'package:platforms/platforms.dart';
+import 'package:platformer/platformer.dart';
 
 void main() {
-  if (Platform.isWeb) {
+  if (Platformer.isWeb) {
     print('Running on the web');
   }
 
-  if (Platform.isAndroid) {
+  if (Platformer.isAndroid) {
     print('Running on Android');
   }
 
-  if (Platform.isWindows) {
+  if (Platformer.isWindows) {
     print('Running on Windows');
   }
 }
@@ -100,8 +100,8 @@ The correct implementation is chosen automatically by Dart:
 
 ```dart
 export 'stub.dart'
-    if (dart.library.io) 'platform_io.dart'
-    if (dart.library.html) 'platform_web.dart';
+    if (dart.library.io) 'platformer_io.dart'
+    if (dart.library.html) 'platformer_web.dart';
 ```
 
 This guarantees:
@@ -113,8 +113,8 @@ This guarantees:
 You always interact with a single API:
 
 ```dart
-Platform.isWeb;
-Platform.isAndroid;
+Platformer.isWeb;
+Platformer.isAndroid;
 ...
 ```
 
@@ -124,7 +124,7 @@ Platform.isAndroid;
 
 This package follows strict principles:
 
-### **1. Zero platform guessing**
+### **1. Zero platformer guessing**
 
 No UA parsing, no indirect heuristics, no assumptions.
 If the platform cannot be identified, it defaults to a safe stub.
@@ -147,12 +147,12 @@ One class. Six booleans. Nothing else.
 
 ```dart
 void main() {
-  print('Web: ${Platform.isWeb}');
-  print('Android: ${Platform.isAndroid}');
-  print('iOS: ${Platform.isIOS}');
-  print('Windows: ${Platform.isWindows}');
-  print('Linux: ${Platform.isLinux}');
-  print('macOS: ${Platform.isMacOS}');
+  print('Web: ${Platformer.isWeb}');
+  print('Android: ${Platformer.isAndroid}');
+  print('iOS: ${Platformer.isIOS}');
+  print('Windows: ${Platformer.isWindows}');
+  print('Linux: ${Platformer.isLinux}');
+  print('macOS: ${Platformer.isMacOS}');
 }
 ```
 
@@ -162,7 +162,7 @@ Output depends entirely on the build target.
 
 ## **When should you use this package?**
 
-Use `platforms` if you:
+Use `platformer` if you:
 
 - want platform checks that work identically in Dart, Flutter, and Web
 - want a stable interface without worrying about conditional imports

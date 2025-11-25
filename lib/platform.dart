@@ -1,6 +1,6 @@
-/// Entry point for the `platforms` package.
+/// Entry point for the `platformers` package.
 ///
-/// This file exposes a single `Platform` class, whose implementation is
+/// This file exposes a single `Platformer` class, whose implementation is
 /// selected at compile time using conditional exports:
 ///
 ///   • Stub implementation
@@ -17,20 +17,20 @@
 /// Consumers should always import this file:
 ///
 /// ```dart
-/// import 'package:platforms/platforms.dart';
+/// import 'package:platformers/platformers.dart';
 ///
-/// if (Platform.isWeb) { ... }
-/// if (Platform.isAndroid) { ... }
+/// if (Platformer.isWeb) { ... }
+/// if (Platformer.isAndroid) { ... }
 /// ```
 ///
-/// The actual implementation behind `Platform` is transparently handled by
+/// The actual implementation behind `Platformer` is transparently handled by
 /// Dart's conditional import system.
 /// No caller should import the platform-specific files directly.
 
 // ignore: unnecessary_library_name
-library platforms;
+library platformers;
 
-export 'src/platform/stub/universal_platform_stub.dart'
-    if (dart.library.io) '/platform/Platforms/universal_platform_io.dart'
-    if (dart.library.html) '/platform/Platforms/stub/universal_platform_web.dart'
-    show Platform;
+export 'src/platformer/stub/universal_platformer_stub.dart'
+    if (dart.library.io) '/platformer/Platformers/universal_platformer_io.dart'
+    if (dart.library.html) '/platformer/Platformers/stub/universal_platformer_web.dart'
+    show Platformer;

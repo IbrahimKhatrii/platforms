@@ -7,14 +7,14 @@
 ///
 /// In this stub implementation, **all getters always return `false`**.
 /// Real platform detection is provided by the dedicated implementations:
-///   • `platform_io.dart`  (Android, iOS, Windows, Linux, macOS)
-///   • `platform_web.dart` (Browser)
+///   • `platformer_io.dart`  (Android, iOS, Windows, Linux, macOS)
+///   • `platformer_web.dart` (Browser)
 ///
 /// Always import the package entrypoint:
-///     import 'package:platforms/platforms.dart';
+///     import 'package:platformers/platformers.dart';
 ///
 /// Do not rely on this file directly.
-class Platform {
+class Platformer {
   /// Indicates whether the code is running in a Web environment.
   ///
   /// Stub version → always returns `false`.

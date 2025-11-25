@@ -1,4 +1,4 @@
-/// Web-specific implementation of the `Platform` class.
+/// Web-specific implementation of the `Platformer` class.
 ///
 /// This version is selected when the code is compiled for the browser.
 /// Since the web environment does not expose native platform details,
@@ -12,10 +12,10 @@
 /// and such detection is intentionally outside the scope of this package.
 ///
 /// Always import via:
-///     import 'package:platforms/platforms.dart';
+///     import 'package:platformers/platformers.dart';
 ///
 /// This file should never be imported directly.
-class Platform {
+class Platformer {
   /// Indicates that this runtime is the Web.
   ///
   /// Always returns `true` in the web implementation.
