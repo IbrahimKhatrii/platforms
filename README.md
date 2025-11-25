@@ -54,7 +54,7 @@ dependencies:
 Then import it:
 
 ```dart
-import 'package:platformer/platform.dart';
+import 'package:platformer/platformer.dart';
 ```
 
 ---
@@ -64,7 +64,7 @@ import 'package:platformer/platform.dart';
 The API is intentionally simple and mirrors Dart’s native naming.
 
 ```dart
-import 'package:platformer/platform.dart';
+import 'package:platformer/platformer.dart';
 
 void main() {
   if (Platformer.isWeb) {

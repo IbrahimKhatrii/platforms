@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:platformer/platform.dart';
+import 'package:platformer/platformer.dart';
 
 void main() {
   // This example demonstrates how Platformer.* flags behave on:
