@@ -23,7 +23,7 @@ Dart’s platform detection APIs differ between `dart:io`, `dart:html`, Flutter,
 This package standardizes that behavior by exposing a single, unified `Platformer` class:
 
 - **Web builds** → 100% web-specific implementation
-- **IO builds** → backed directly by `dart:io.Platformer`
+- **IO builds** → backed directly by `dart:io.Platform`
 - **Unsupported/unknown builds** → safe stub fallback
 
 This ensures deterministic behavior with zero ambiguity.
@@ -54,7 +54,7 @@ dependencies:
 Then import it:
 
 ```dart
-import 'package:platformer/platformer.dart';
+import 'package:platformer/platform.dart';
 ```
 
 ---
@@ -64,7 +64,7 @@ import 'package:platformer/platformer.dart';
 The API is intentionally simple and mirrors Dart’s native naming.
 
 ```dart
-import 'package:platformer/platformer.dart';
+import 'package:platformer/platform.dart';
 
 void main() {
   if (Platformer.isWeb) {
