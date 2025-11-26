@@ -1,6 +1,6 @@
 # **CHANGELOG.md**
 
-## 1.0.1 — Initial Release
+## 1.0.2 — Initial Release
 
 - Introduced unified `Platformer` class with full compile-time dispatch.
 - Implemented `dart:io` platformer detection for Android, iOS, Windows, Linux, macOS.

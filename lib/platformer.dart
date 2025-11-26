@@ -31,6 +31,6 @@
 library platformers;
 
 export 'src/platformer/stub/universal_platformer_stub.dart'
-    if (dart.library.io) '/platformer/Platformers/universal_platformer_io.dart'
-    if (dart.library.html) '/platformer/Platformers/stub/universal_platformer_web.dart'
+    if (dart.library.io) 'src/platformer/universal_platformer_io.dart'
+    if (dart.library.html) 'src/platformer/stub/universal_platformer_web.dart'
     show Platformer;

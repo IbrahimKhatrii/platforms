@@ -1,9 +1,9 @@
 name: platformer
 description: A lightweight and minimal platform-detection utility package.
-version: 1.0.1
-homepage: https://github.com/IbrahimKhatrii/platform
-repository: https://github.com/IbrahimKhatrii/platform
-issue_tracker: https://github.com/IbrahimKhatrii/platformer/issues
+version: 1.0.2
+homepage: https://github.com/IbrahimKhatrii/platforms
+repository: https://github.com/IbrahimKhatrii/platforms
+issue_tracker: https://github.com/IbrahimKhatrii/platforms/issues
 license: MIT
 
 environment:
